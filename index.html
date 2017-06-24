@@ -1,0 +1,287 @@
+<html>
+<head>
+    <title>Clinica San Agustin</title>
+    <link rel="stylesheet" href="iestil.css">
+    <meta charset="utf-8">
+    <meta name="author" content="grupo3">
+    <meta name="description" content="Citas medicas ">
+    <link rel="stylesheet" type="text/css" href="style/estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+<body>
+        
+<!---------------------------BARRA DE NAVEGACIÓN SUPERIOR DONDE SE LLAMAN A LOS MODALS DE LOS FORMULARIOS------------------------>
+   
+    <div class="w3-bar" style="background-color: #00cc99">
+     
+      <!----------------------------BOTON DEL FORMULARIO DE REGISTRO DE MÉDICO-------------->
+      
+      <button class="w3-bar-item1 w3-button" onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Registrar Médico</button><div id="id01" class="w3-modal">
+            <div class="w3-modal-content">
+                <header class="w3-container w3-teal">
+                       <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                       <h2 >Registrar Médico</h2>
+                </header>
+                <div class="w3-container">
+                    <div class="formulario">
+                        <table>
+                           <tr>
+                               <th><input type="text" placeholder="Nombres"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="text" placeholder="Apellidos"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="text" placeholder="Documento de identidad" maxlength="11" onkeypress="return justNumbers(event);"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="text" placeholder="Ciudad"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="text" placeholder="Edad" onkeypress="return justNumbers(event);" min="18" max="60" maxlength="2"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="email" placeholder="Email"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="text" placeholder="Teléfono/Celular" onkeypress="return justNumbers(event);" maxlength="10"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="text" placeholder="Dirección"></th>
+                           </tr>
+                        </table>
+                        <bottom class="w3-button w3-black">Guardar</bottom></td>
+                    </div>
+                </div>
+                <footer class="w3-container w3-teal">
+                     <p></p>
+                </footer>
+            </div>
+        </div>
+        
+      <!----------------------------BOTON DEL FORMULARIO DE HORARIOS-------------->
+      
+      <button class="w3-bar-item w3-button" onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">Registrar Horario</button><div id="id02" class="w3-modal">
+            <div class="w3-modal-content">
+                <header class="w3-container w3-teal">
+                       <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                       <h2 >Registrar Horarios</h2>
+                </header>
+                <div class="w3-container">
+                    <div class="formulario">
+                        <table>
+                           <tr>
+                               <th>Lunes</th>
+                               <th>Martes</th>
+                               <th>Miércoles</th>
+                               <th>Jueves</th>
+                               <th>Viernes</th>
+                               <th>Sábado</th>
+                           </tr>
+                           <tr>
+                               <td><bottom class="w3-button w3-black" onclick="document.getElementById('id04').style.display='block'" class="w3-button w3-black">Nuevo</bottom>
+                               
+                               
+                               <div id="id04" class="w3-modal">
+                                    <div class="w3-modal-content w3-card-4">
+                                      <header class="w3-container w3-teal"> 
+                                        <span onclick="document.getElementById('id04').style.display='none'" 
+                                        class="w3-button w3-display-topright">&times;</span>
+                                        <h2 >Nuevo Horario</h2>
+                                      </header>
+                                      <div class="w3-container">
+                                        <p><input type="date" placeholder=""></p>
+                                      </div>
+                                      <bottom class="w3-button w3-black">Guardar</bottom>
+                                      <footer class="w3-container w3-teal">
+                                             <p></p>
+                                       </footer>
+                                    </div>
+                                </div>
+                               </td>
+                               <td><bottom class="w3-button w3-black"onclick="document.getElementById('id05').style.display='block'" class="w3-button w3-black">Nuevo</bottom><div id="id05" class="w3-modal">
+                               <div class="w3-modal-content">
+                                   <header class="w3-container w3-teal"> 
+                                        <span onclick="document.getElementById('id05').style.display='none'" 
+                                        class="w3-button w3-display-topright">&times;</span>
+                                        <h2 >Nuevo Horario</h2>
+                                      </header>
+                                      <div class="w3-container">
+                                        <p><input type="date" placeholder=""></p>
+                                      </div>
+                                      <bottom class="w3-button w3-black">Guardar</bottom>
+                                   <footer class="w3-container w3-teal">
+                                         <p></p>
+                                   </footer>
+                               </td>
+                               <td><bottom class="w3-button w3-black"onclick="document.getElementById('id06').style.display='block'" class="w3-button w3-black">Nuevo</bottom><div id="id06" class="w3-modal">
+                               <div class="w3-modal-content">
+                                   <header class="w3-container w3-teal"> 
+                                        <span onclick="document.getElementById('id06').style.display='none'" 
+                                        class="w3-button w3-display-topright">&times;</span>
+                                        <h2 >Nuevo Horario</h2>
+                                      </header>
+                                      <div class="w3-container">
+                                        <p><input type="date" placeholder=""></p>
+                                      </div>
+                                      <bottom class="w3-button w3-black">Guardar</bottom>
+                                   <footer class="w3-container w3-teal">
+                                         <p></p>
+                                   </footer>
+                               </td>
+                               <td><bottom class="w3-button w3-black"onclick="document.getElementById('id07').style.display='block'" class="w3-button w3-black">Nuevo</bottom><div id="id07" class="w3-modal">
+                               <div class="w3-modal-content">
+                                   <header class="w3-container w3-teal"> 
+                                        <span onclick="document.getElementById('id07').style.display='none'" 
+                                        class="w3-button w3-display-topright">&times;</span>
+                                        <h2 >Nuevo Horario</h2>
+                                      </header>
+                                      <div class="w3-container">
+                                        <p><input type="date" placeholder=""></p>
+                                      </div>
+                                      <bottom class="w3-button w3-black">Guardar</bottom>
+                                   <footer class="w3-container w3-teal">
+                                         <p></p>
+                                   </footer>
+                               </td>
+                               <td><bottom class="w3-button w3-black"onclick="document.getElementById('id08').style.display='block'" class="w3-button w3-black">Nuevo</bottom><div id="id08" class="w3-modal">
+                               <div class="w3-modal-content">
+                                   <header class="w3-container w3-teal"> 
+                                        <span onclick="document.getElementById('id08').style.display='none'" 
+                                        class="w3-button w3-display-topright">&times;</span>
+                                        <h2 >Nuevo Horario</h2>
+                                      </header>
+                                      <div class="w3-container">
+                                        <p><input type="date" placeholder=""></p>
+                                      </div>
+                                      <bottom class="w3-button w3-black">Guardar</bottom>
+                                   <footer class="w3-container w3-teal">
+                                         <p></p>
+                                   </footer>
+                               </td>
+                               <td><bottom class="w3-button w3-black"onclick="document.getElementById('id09').style.display='block'" class="w3-button w3-black">Nuevo</bottom><div id="id09" class="w3-modal">
+                               <div class="w3-modal-content">
+                                   <header class="w3-container w3-teal"> 
+                                        <span onclick="document.getElementById('id09').style.display='none'" 
+                                        class="w3-button w3-display-topright">&times;</span>
+                                        <h2 >Nuevo Horario</h2>
+                                      </header>
+                                      <div class="w3-container">
+                                        <p><input type="date" placeholder=""></p>
+                                      </div>
+                                      <bottom class="w3-button w3-black">Guardar</bottom>
+                                         <p></p>
+                                   </footer>
+                               </td>
+                           </tr>
+                        </table>
+                    </div>
+                </div>
+                <footer class="w3-container w3-teal">
+                     <p></p>
+                </footer>
+            </div>
+        </div>
+        
+        <!----------------------------BOTON DEL FORMULARIO DE DATOS DE LA SECRETARIA-------------->
+        
+      <button class="w3-bar-item w3-button" onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-black">Secretaria</button><div id="id03" class="w3-modal">
+            <div class="w3-modal-content">
+                <header class="w3-container w3-teal">
+                       <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                       <h2 >Datos de la Secretaria</h2>
+                </header>
+                <div class="w3-container">
+                    <div class="formulario">
+                        <table>
+                           <tr>
+                               <th><input type="text" placeholder="Nombres"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="text" placeholder="Apellidos"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="text" placeholder="Ciudad"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="number" placeholder="Documento de identidad" onkeypress="return justNumbers(event);"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="email" placeholder="Email"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="text" placeholder="Teléfono/Celular" onkeypress="return justNumbers(event);"></th>
+                           </tr>
+                           <tr>
+                               <th><input type="text" placeholder="Dirección"></th>
+                           </tr>
+                           <tr>
+                               <h2>Seleccionar Tarifa
+                               <SELECT NAME="selCombo" SIZE=1 onChange="javascript:alert('Registro Exito');"> 
+                               <OPTION VALUE="1">5 dolares</OPTION>
+                               <OPTION VALUE="2">10 dolares</OPTION>
+                               <OPTION VALUE="3">15 dolares</OPTION>
+                               <OPTION VALUE="4">20 dolares</OPTION>
+                               <OPTION VALUE="5">25 dolares</OPTION> 
+                               <OPTION VALUE="6">25 dolares</OPTION> </h2>
+                           </tr>
+                        </table>
+                        <bottom class="w3-button w3-black">Guardar</bottom></td>
+                    </div>
+                </div>
+                <footer class="w3-container w3-teal">
+                     <p></p>
+                </footer>
+            </div>
+        </div>
+    
+<!--------------------------------------------------------CÓDIGO DEL SLIDER------------------------------------------------------>
+    <div class="w3-content w3-display-container" style="background-color: white">
+      <center><img class="mySlides" src="m1.jpg" style="width:700px" style="height:700px"></center>
+      <center><img class="mySlides" src="m2.jpg" style="width:700px" style="height:700px"></center>
+      <center><img class="mySlides" src="m3.jpg" style="width:700px" style="height:700px"></center>
+      <center><img class="mySlides" src="m4.jpg" style="width:700px" style="height:700px"></center>
+      <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+      <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+      showDivs(slideIndex += n);
+    }
+    function showDivs(n) {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      if (n > x.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = x.length}
+      for (i = 0; i < x.length; i++) {
+         x[i].style.display = "none";  
+      }
+      x[slideIndex-1].style.display = "block";  
+    }
+    </script>
+<!------------------------------------------------------------------------------------------------------------------------------>
+    <script>
+        function justNumbers(e){
+        var keynum = window.event ? window.event.keyCode : e.which;
+        if ((keynum == 8) || (keynum == 46))
+        return true;
+
+        return /\d/.test(String.fromCharCode(keynum));
+        }
+    </script>
+    <div class="w3-container">
+      <p><i class="fa fa-spinner w3-spin" style="font-size:64px"></i></p>
+    </div>
+
+    <div id="espacio" class="side2">
+        <center><img src="fondo.jpg" border="0" width="1320" height="40"></center>
+    </div>
+    <div id="starts" >
+        <center><img src="f1.png" border="0" width="1230" height="150"></center>
+    </div>
+</body>
+</html>
